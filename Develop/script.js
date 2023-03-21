@@ -1,5 +1,5 @@
 // wraps the code in a function that runs when the page loads
-
+$(document).ready (function () {
 
   // code to store current hour in a variable
   var nowHour = dayjs().format('H');
@@ -50,3 +50,4 @@
   $("#currentDay").text(nowDate);
   localStorageRetrieve();
   updateColors();
+});
