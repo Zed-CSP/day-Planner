@@ -4,9 +4,11 @@ $(document).ready (function () {
   // code to store current hour in a variable
   var nowHour = dayjs().format('H');
     console.log(nowHour);
+
   // code to store current date in a variable
   var nowDate = dayjs().format('MM/DD/YYYY');
     console.log(nowDate);
+    
   // jquery code to store the time blocks in a variable array
   var timeBlock = $(".time-block");
     console.log(timeBlock);
@@ -21,7 +23,7 @@ $(document).ready (function () {
       localStorage.setItem(time, text);
       console.log(text);
   });
-  
+
   // code to update the colors of the time blocks based on the current time
   function updateColors() {
     for (var i = 0; i < timeBlock.length; i++) {
