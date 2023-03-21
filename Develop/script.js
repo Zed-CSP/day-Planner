@@ -10,6 +10,7 @@ $(document).ready (function () {
   // jquery code to store the time blocks in a variable array
   var timeBlock = $(".time-block");
     console.log(timeBlock);
+  
   // code to store the save button in a variable
   $(".saveBtn").on("click", function () {
     // grabs the siblings of the save button and stores the value of the description class in a variable
@@ -20,6 +21,7 @@ $(document).ready (function () {
       localStorage.setItem(time, text);
       console.log(text);
   });
+  
   // code to update the colors of the time blocks based on the current time
   function updateColors() {
     for (var i = 0; i < timeBlock.length; i++) {
@@ -41,11 +43,6 @@ $(document).ready (function () {
       $(`#${i} .description`).val(localStorage.getItem(`${i}`));
     }
   }
-
-  // creates a timer refreshing the page every hour
-  setInterval(function () {
-    location.reload();
-  }, 60000);
 
   // executed functions
   $("#currentDay").text(nowDate);
