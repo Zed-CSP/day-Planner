@@ -1,5 +1,5 @@
 // wraps the code in a function that runs when the page loads
-$(document).ready (function () {
+
 
   // code to store current hour in a variable
   var nowHour = dayjs().format('H');
@@ -8,7 +8,7 @@ $(document).ready (function () {
   // code to store current date in a variable
   var nowDate = dayjs().format('MM/DD/YYYY');
     console.log(nowDate);
-    
+
   // jquery code to store the time blocks in a variable array
   var timeBlock = $(".time-block");
     console.log(timeBlock);
@@ -50,4 +50,3 @@ $(document).ready (function () {
   $("#currentDay").text(nowDate);
   localStorageRetrieve();
   updateColors();
-});
