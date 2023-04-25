@@ -41,7 +41,7 @@ $(document).ready (function () {
 
   // code to display saved text from local storage to the right time block using the id attribute of each time-block.
   function localStorageRetrieve() {
-    for (let i = 9; i <= 15; i++) {
+    for (let i = 9; i <= 17; i++) {
       $(`#${i} .description`).val(localStorage.getItem(`${i}`));
     }
   }
